@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+/data/
+generalization_2025/monthly_jfk/
+generalization_2025/shared_samples/*.csv
+time_series_forecast/data/*.csv
+*/results/*_predictions.csv
