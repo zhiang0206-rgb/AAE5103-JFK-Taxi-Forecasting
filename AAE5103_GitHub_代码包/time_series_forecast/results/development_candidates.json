@@ -1,0 +1,23 @@
+{
+  "note": "Both development variants use training-estimated weekly profile and residual AR coefficient. June validation was inspected to compare them, so June is model-selection evidence, not a final unbiased test.",
+  "candidates": [
+    {
+      "lag_minutes": 1,
+      "ar1_coefficient": 0.18928359911956247,
+      "validation": {
+        "mae_trips": 28.49468459814281,
+        "rmse_trips": 40.02152358799193
+      }
+    },
+    {
+      "lag_minutes": 10,
+      "ar1_coefficient": 0.6142084556313825,
+      "validation": {
+        "mae_trips": 25.63371757925072,
+        "rmse_trips": 35.046271504022414
+      }
+    }
+  ],
+  "selected_lag_minutes": 10,
+  "selection": "10-minute residual captures recent changes over the forecast horizon and had lower June MAE; reserve July–December for final assessment."
+}

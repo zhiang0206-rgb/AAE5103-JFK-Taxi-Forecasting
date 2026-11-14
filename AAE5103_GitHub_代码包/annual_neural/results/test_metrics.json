@@ -1,0 +1,88 @@
+{
+  "method": "neural_network",
+  "test_period": "2025-07-01 to 2025-12-31",
+  "test_rows": 191544,
+  "test_data_sha256": "523d12adfbd53596cfa5315671e5e145ea9cada92e699d198848681035278563",
+  "frozen_model_sha256": "2d350914da7e77decb603d83d1910893eb3772c777753749ab80a1aa9cf1f77e",
+  "overall": {
+    "mae_trips": 23.913184438040346,
+    "rmse_trips": 31.172913526577126,
+    "bias_trips": -3.713846426930627
+  },
+  "by_month": {
+    "2025-07": {
+      "rows": 32271,
+      "mae_trips": 22.053949366304114,
+      "rmse_trips": 28.797081188449035,
+      "bias_trips": -2.833100926528462
+    },
+    "2025-08": {
+      "rows": 32271,
+      "mae_trips": 21.6543336122215,
+      "rmse_trips": 27.993707155291904,
+      "bias_trips": -4.889002509993492
+    },
+    "2025-09": {
+      "rows": 31230,
+      "mae_trips": 23.81476144732629,
+      "rmse_trips": 30.937082505746062,
+      "bias_trips": -7.995292987512007
+    },
+    "2025-10": {
+      "rows": 32271,
+      "mae_trips": 26.13588051191472,
+      "rmse_trips": 34.06307002622365,
+      "bias_trips": -8.265656471754827
+    },
+    "2025-11": {
+      "rows": 31230,
+      "mae_trips": 26.231348062760166,
+      "rmse_trips": 34.16071478816414,
+      "bias_trips": -0.6572206211975664
+    },
+    "2025-12": {
+      "rows": 32271,
+      "mae_trips": 23.660438164296117,
+      "rmse_trips": 30.644050871264163,
+      "bias_trips": 2.317684608472003
+    }
+  },
+  "by_day_type": {
+    "workday": {
+      "rows": 137412,
+      "mae_trips": 23.671324192938027,
+      "rmse_trips": 30.857682620673096,
+      "bias_trips": -3.5264751258987572
+    },
+    "weekend": {
+      "rows": 54132,
+      "mae_trips": 24.527137367915465,
+      "rmse_trips": 31.959153863992665,
+      "bias_trips": -4.189481268011527
+    }
+  },
+  "by_prediction_time": {
+    "06:00-11:59": {
+      "rows": 66240,
+      "mae_trips": 15.915821256038647,
+      "rmse_trips": 20.08804893823508,
+      "bias_trips": -2.3930253623188404
+    },
+    "12:00-17:59": {
+      "rows": 66240,
+      "mae_trips": 25.540458937198068,
+      "rmse_trips": 32.20904601082647,
+      "bias_trips": -4.838254830917874
+    },
+    "18:00-23:20": {
+      "rows": 59064,
+      "mae_trips": 31.05720912908032,
+      "rmse_trips": 39.183626418490235,
+      "bias_trips": -3.934122308004876
+    }
+  },
+  "forecast_protocol": "rolling origin; historic inputs must have occurred by as_of; no model refitting",
+  "target": "JFK recorded pickups in (t+10min,t+40min], excluding next-day midnight",
+  "rounding": "nonnegative integer, nearest with ties to even",
+  "note": "Overlapping windows are dependent; observed trips not unmet demand; past test observations may be used as inputs."
+}

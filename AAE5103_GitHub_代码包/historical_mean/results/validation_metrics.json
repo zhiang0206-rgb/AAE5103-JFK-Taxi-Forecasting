@@ -1,0 +1,18 @@
+{
+  "method": "same weekday, same window, mean of previous 3 weeks",
+  "validation_period": "2025-06-01 to 2025-06-30",
+  "validation_rows": 31230,
+  "validation": {
+    "mae_trips": 27.8084213896894,
+    "rmse_trips": 38.54978317579824
+  },
+  "workday": {
+    "mae_trips": 26.612369059054938,
+    "rmse_trips": 36.258409964099954
+  },
+  "weekend": {
+    "mae_trips": 30.599210161169815,
+    "rmse_trips": 43.42868398166266
+  },
+  "note": "No parameters fitted; each forecast uses earlier observed windows. Test set not opened."
+}

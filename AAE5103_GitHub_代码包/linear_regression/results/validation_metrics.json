@@ -1,0 +1,40 @@
+{
+  "period": "2025-06-01 to 2025-06-30",
+  "rows": 31230,
+  "train_sha256": "e7f23bf22ccb497ebf49a195197d130d88c136220d58752b461e43f11b8999b4",
+  "validation_sha256": "aae421f41498768b0d0c22fec3ff4c3b4a1d6c7b8f966b92c6354b4c127b3fa8",
+  "linear_regression": {
+    "mae_trips": 25.189497278258084,
+    "rmse_trips": 33.13725809175009
+  },
+  "historical_average_three_week": {
+    "mae_trips": 27.8084213896894,
+    "rmse_trips": 38.54978317579824
+  },
+  "prediction_treatment": "model output clipped at zero and rounded to nearest integer, ties to even",
+  "caution": "Overlapping one-minute windows are dependent. Outcomes are recorded JFK taxi pickups, not unmet passenger demand.",
+  "by_day_type": {
+    "workday": {
+      "samples": 21861,
+      "linear_regression": {
+        "mae_trips": 24.619962490279494,
+        "rmse_trips": 31.807667135108048
+      },
+      "historical_average_three_week": {
+        "mae_trips": 26.612369059054938,
+        "rmse_trips": 36.258409964099954
+      }
+    },
+    "weekend": {
+      "samples": 9369,
+      "linear_regression": {
+        "mae_trips": 26.518411783541467,
+        "rmse_trips": 36.04943327500791
+      },
+      "historical_average_three_week": {
+        "mae_trips": 30.599210161169815,
+        "rmse_trips": 43.42868398166266
+      }
+    }
+  }
+}

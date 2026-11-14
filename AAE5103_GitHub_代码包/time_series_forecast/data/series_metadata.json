@@ -1,0 +1,36 @@
+{
+  "source_files": [
+    {
+      "file": "jfk_yellow_2025-01.parquet",
+      "sha256": "0db2a4a90ace71d4b9b110f05da86b32d1d6faff5ced3956f330b35f6e4c546e"
+    },
+    {
+      "file": "jfk_yellow_2025-02.parquet",
+      "sha256": "9b0987e138caf08a38cee6ef320372aa22f79663bf9cd9d053fb74f015c9a87a"
+    },
+    {
+      "file": "jfk_yellow_2025-03.parquet",
+      "sha256": "eb1d8a5821dafc1003b9b2a4db0ecbe47939c12acb38bd058bdf9a39c6d84bf2"
+    },
+    {
+      "file": "jfk_yellow_2025-04.parquet",
+      "sha256": "a83333c7b6c2ae5d1a05b0b38453714a6887dafa8c430fae9ff3ab9ef135ea4e"
+    },
+    {
+      "file": "jfk_yellow_2025-05.parquet",
+      "sha256": "bead273d1573f6ea27da1777826dceae8ecd3eccff1b92d2220135e3b730fc20"
+    },
+    {
+      "file": "jfk_yellow_2025-06.parquet",
+      "sha256": "d32898b15c7d929613e910442fed41684fa0a0bc50c47198c02d723197dd8fa5"
+    }
+  ],
+  "bin_definition": "(bin_end-1min, bin_end], midnight end excludes the midnight instant",
+  "scope": "January through June only, plus June 30 final bin at 2025-07-01 00:00, excluding the midnight instant",
+  "invalid": "first bin lacks prior December data; 2025-03-09 02:00\u201303:00 local excluded for DST transition",
+  "minute_rows": {
+    "train": 217440,
+    "validation": 43201
+  },
+  "input_records": 975764
+}

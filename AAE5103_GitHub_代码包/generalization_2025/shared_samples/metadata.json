@@ -1,0 +1,44 @@
+{
+  "scope": "JFK yellow taxi pickup records 2025-01 through 2025-12",
+  "source": "NYC TLC monthly yellow taxi trip records; PULocationID=132",
+  "source_record_count": 2062443,
+  "split": {
+    "train": "2025-01-01 to 2025-05-31",
+    "validation": "2025-06-01 to 2025-06-30",
+    "test": "2025-07-01 to 2025-12-31"
+  },
+  "rows": {
+    "train": 157191,
+    "validation": 31230,
+    "test": 191544
+  },
+  "baseline_unavailable_rows": {
+    "train": 21861,
+    "validation": 0,
+    "test": 0
+  },
+  "features": [
+    "last_10_min",
+    "last_30_min",
+    "last_60_min",
+    "hour_sin",
+    "hour_cos",
+    "weekday_0",
+    "weekday_1",
+    "weekday_2",
+    "weekday_3",
+    "weekday_4",
+    "weekday_5",
+    "weekday_6"
+  ],
+  "history_three_week": "Reference baseline only, NOT a model feature. Prior 1,2,3 same weekdays, same target window, rounded to integer; blank before Jan 22. Earlier observed test dates can serve as history.",
+  "target": "Counts JFK pickups in (t+10min,t+40min], excluding next-day midnight, same as prior demo",
+  "prediction_schedule": "Daily at one-minute intervals from 06:00 to 23:20 inclusive; New York local time",
+  "important": [
+    "Test set must not be used for fitting, tuning, early stopping, or choosing model features.",
+    "Adjacent windows overlap heavily; rows are not independent.",
+    "Historical averages depend on actual pickups being observed, not only a fixed static forecast.",
+    "January and February etc extracted separately from raw monthly files with out-of-month rows excluded.",
+    "No weather or flight features; not observed passenger arrival or waiting; no guarantee of realtime availability."
+  ]
+}

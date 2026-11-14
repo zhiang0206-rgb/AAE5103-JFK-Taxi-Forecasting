@@ -1,0 +1,72 @@
+{
+  "seeds": [
+    42,
+    7,
+    123
+  ],
+  "epochs_per_seed": 80,
+  "same_original_architecture": "12 → 16 → 1 ReLU",
+  "optimiser": "Adam",
+  "learning_rate": 0.003,
+  "batch_size": 128,
+  "early_stopping": "disabled for diagnostics",
+  "train_sha256": "e7f23bf22ccb497ebf49a195197d130d88c136220d58752b461e43f11b8999b4",
+  "validation_sha256": "aae421f41498768b0d0c22fec3ff4c3b4a1d6c7b8f966b92c6354b4c127b3fa8",
+  "train_rows": 157191,
+  "validation_rows": 31230,
+  "y_std": 61.20362854003906,
+  "runs": [
+    {
+      "seed": 42,
+      "best_epoch": 6,
+      "best_validation_mse": 0.24287903308868408,
+      "validation_scores": {
+        "mae_trips": 22.920012808197246,
+        "rmse_trips": 30.16331467782522
+      },
+      "validation_mae_by_week": {
+        "Jun 1-7": 24.758336764100452,
+        "Jun 8-14": 22.33786194593111,
+        "Jun 15-21": 20.42610127624537,
+        "Jun 22-30": 23.882698260219875
+      }
+    },
+    {
+      "seed": 7,
+      "best_epoch": 7,
+      "best_validation_mse": 0.24628721177577972,
+      "validation_scores": {
+        "mae_trips": 23.27681716298431,
+        "rmse_trips": 30.374354987755545
+      },
+      "validation_mae_by_week": {
+        "Jun 1-7": 24.93865788390284,
+        "Jun 8-14": 22.686976808014272,
+        "Jun 15-21": 20.744750926307123,
+        "Jun 22-30": 24.41242395132885
+      }
+    },
+    {
+      "seed": 123,
+      "best_epoch": 57,
+      "best_validation_mse": 0.2474655956029892,
+      "validation_scores": {
+        "mae_trips": 23.0402497598463,
+        "rmse_trips": 30.44622404235704
+      },
+      "validation_mae_by_week": {
+        "Jun 1-7": 24.923425277892136,
+        "Jun 8-14": 22.219294634280224,
+        "Jun 15-21": 20.56854672704817,
+        "Jun 22-30": 24.136514035649483
+      }
+    }
+  ],
+  "notes": [
+    "Only January–May train and June validation read.",
+    "End-of-epoch training and validation losses both computed after model updates.",
+    "Original model and held-out test set untouched.",
+    "Selecting seeds or epochs using June may overfit the validation month."
+  ],
+  "seed_42_matches_original_state": true
+}

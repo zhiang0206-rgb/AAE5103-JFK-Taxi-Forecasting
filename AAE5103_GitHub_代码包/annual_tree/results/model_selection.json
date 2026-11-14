@@ -1,0 +1,46 @@
+{
+  "selection_rule": "Lowest June MAE after non-negative clipping and nearest integer rounding; ties choose shallower tree",
+  "candidates": [
+    {
+      "depth": 3,
+      "validation": {
+        "mae_trips": 27.405123278898493,
+        "rmse_trips": 36.4126728070628
+      },
+      "leaves": 8
+    },
+    {
+      "depth": 4,
+      "validation": {
+        "mae_trips": 26.449471661863594,
+        "rmse_trips": 34.755515437785434
+      },
+      "leaves": 16
+    },
+    {
+      "depth": 6,
+      "validation": {
+        "mae_trips": 24.902849823887287,
+        "rmse_trips": 32.87356600155604
+      },
+      "leaves": 63
+    },
+    {
+      "depth": 8,
+      "validation": {
+        "mae_trips": 24.645373038744797,
+        "rmse_trips": 32.73051309331868
+      },
+      "leaves": 186
+    }
+  ],
+  "selected_max_depth": 8,
+  "train_rows": 157191,
+  "validation_rows": 31230,
+  "train_sha256": "e7f23bf22ccb497ebf49a195197d130d88c136220d58752b461e43f11b8999b4",
+  "validation_sha256": "aae421f41498768b0d0c22fec3ff4c3b4a1d6c7b8f966b92c6354b4c127b3fa8",
+  "notes": [
+    "All candidates fitted on Jan–May only.",
+    "June used for model selection; July–December was not used."
+  ]
+}

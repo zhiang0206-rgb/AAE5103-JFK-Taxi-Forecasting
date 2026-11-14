@@ -1,0 +1,55 @@
+{
+  "period": "2025-06-01 to 2025-06-30",
+  "rows": 31230,
+  "series_sha256": "f388ad4bae5a0757b53ecba5ad728300b54929f7c586afa9ccdd6c9446870581",
+  "windows_sha256": "aae421f41498768b0d0c22fec3ff4c3b4a1d6c7b8f966b92c6354b4c127b3fa8",
+  "time_series": {
+    "mae_trips": 25.63371757925072,
+    "rmse_trips": 35.046271504022414
+  },
+  "historical_average_three_week": {
+    "mae_trips": 27.8084213896894,
+    "rmse_trips": 38.54978317579824
+  },
+  "linear_regression": {
+    "mae_trips": 25.189497278258084,
+    "rmse_trips": 33.13725809175009
+  },
+  "by_day_type": {
+    "workday": {
+      "samples": 21861,
+      "time_series": {
+        "mae_trips": 23.81679703581721,
+        "rmse_trips": 31.411276123254247
+      },
+      "historical_average_three_week": {
+        "mae_trips": 26.612369059054938,
+        "rmse_trips": 36.258409964099954
+      },
+      "linear_regression": {
+        "mae_trips": 24.619962490279494,
+        "rmse_trips": 31.807667135108048
+      }
+    },
+    "weekend": {
+      "samples": 9369,
+      "time_series": {
+        "mae_trips": 29.87319884726225,
+        "rmse_trips": 42.33097207127534
+      },
+      "historical_average_three_week": {
+        "mae_trips": 30.599210161169815,
+        "rmse_trips": 43.42868398166266
+      },
+      "linear_regression": {
+        "mae_trips": 26.518411783541467,
+        "rmse_trips": 36.04943327500791
+      }
+    }
+  },
+  "notes": [
+    "Fixed model trained Jan–May. Rolling forecast observes the last 10 minutes up to t; future counts used only for scoring.",
+    "Overlapping minute windows are dependent.",
+    "Linear regression, baseline and AR model use different historical information."
+  ]
+}

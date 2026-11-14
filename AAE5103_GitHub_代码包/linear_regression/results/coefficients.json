@@ -1,0 +1,19 @@
+{
+  "intercept": 58.73234346933634,
+  "coefficients": {
+    "last_10_min": 0.7878469195683264,
+    "last_30_min": -0.025205095020168877,
+    "last_60_min": 0.1854041544847552,
+    "hour_sin": -26.18621633048732,
+    "hour_cos": 0.8621317385669204,
+    "weekday_0": -2.416875604711268,
+    "weekday_1": -13.940329303304999,
+    "weekday_2": -13.387002835286742,
+    "weekday_3": -10.941311980041595,
+    "weekday_4": -11.770070869749377,
+    "weekday_5": -13.461147292061113
+  },
+  "weekday_sunday_reference": 0.0,
+  "effective_rank": 11,
+  "explanation": "Sunday is the reference category; one weekday flag is omitted because weekday flags sum to 1."
+}

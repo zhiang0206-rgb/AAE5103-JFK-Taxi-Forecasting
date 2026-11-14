@@ -1,0 +1,66 @@
+{
+  "period": "2025-06-01 to 2025-06-30",
+  "rows": 31230,
+  "selected_max_depth": 8,
+  "train_sha256": "e7f23bf22ccb497ebf49a195197d130d88c136220d58752b461e43f11b8999b4",
+  "validation_sha256": "aae421f41498768b0d0c22fec3ff4c3b4a1d6c7b8f966b92c6354b4c127b3fa8",
+  "validation": {
+    "decision_tree": {
+      "mae_trips": 24.645373038744797,
+      "rmse_trips": 32.73051309331868
+    },
+    "linear_regression": {
+      "mae_trips": 25.189497278258084,
+      "rmse_trips": 33.13725809175009
+    },
+    "time_series": {
+      "mae_trips": 25.63371757925072,
+      "rmse_trips": 35.046271504022414
+    },
+    "historical_average_three_week": {
+      "mae_trips": 27.8084213896894,
+      "rmse_trips": 38.54978317579824
+    }
+  },
+  "by_day_type": {
+    "workday": {
+      "samples": 21861,
+      "decision_tree": {
+        "mae_trips": 23.598097067837703,
+        "rmse_trips": 30.6760521076403
+      },
+      "linear_regression": {
+        "mae_trips": 24.619962490279494,
+        "rmse_trips": 31.807667135108048
+      },
+      "time_series": {
+        "mae_trips": 23.81679703581721,
+        "rmse_trips": 31.411276123254247
+      },
+      "historical_average_three_week": {
+        "mae_trips": 26.612369059054938,
+        "rmse_trips": 36.258409964099954
+      }
+    },
+    "weekend": {
+      "samples": 9369,
+      "decision_tree": {
+        "mae_trips": 27.08901697086135,
+        "rmse_trips": 37.084244916785586
+      },
+      "linear_regression": {
+        "mae_trips": 26.518411783541467,
+        "rmse_trips": 36.04943327500791
+      },
+      "time_series": {
+        "mae_trips": 29.87319884726225,
+        "rmse_trips": 42.33097207127534
+      },
+      "historical_average_three_week": {
+        "mae_trips": 30.599210161169815,
+        "rmse_trips": 43.42868398166266
+      }
+    }
+  },
+  "note": "June was used for depth selection and is not an independent final test. Candidate methods use different historical information; overlapping windows are dependent."
+}
